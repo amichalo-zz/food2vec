@@ -11,7 +11,7 @@ filename = 'food2vec.model.txt'
 food2vec = loadWord2Vec(filename)
 
 vectors = food2vec.syn0
-clustersNo = 1
+clustersNo = 10
 
 logger.info("Preparing clusters...")
 

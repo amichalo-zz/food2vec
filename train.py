@@ -6,12 +6,12 @@ logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=lo
 logger = logging.getLogger('food2vec')
 
 class Receipts(object):
-	def __init__(self, filename):
-		self.filename = filename
+    def __init__(self, filename):
+        self.filename = filename
 
-	def __iter__(self):
-		for line in open(self.filename, 'r').read().split('\n'):
-			yield line.split(',')[1:]
+    def __iter__(self):
+        for line in open(self.filename, 'r').read().split('\n'):
+            yield line.split(',')[1:]
 
 
 sentences = Receipts('receipts_data')
